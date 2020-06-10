@@ -1,0 +1,4 @@
+<h1><%= @blogger.name %>'s Show Page</h1>
+
+<h3>Total Likes: <%= @blogger.total_likes %></h3><br>
+<h3>Most Liked Post: <%= link_to "HERE", post_path(@blogger.most_likes) %></h3>
