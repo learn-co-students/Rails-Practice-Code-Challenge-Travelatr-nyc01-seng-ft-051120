@@ -1,0 +1,7 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+<%= @post.likes %><br>
+<%= link_to @post.blogger.name, blogger_path(@post.blogger_id) %><br>
+<%= link_to @post.destination.name, destination_path(@post.destination_id)%>
+
+<%= button_to "Like", post_path(@post.id), action: 'like', method: 'POST'%>
