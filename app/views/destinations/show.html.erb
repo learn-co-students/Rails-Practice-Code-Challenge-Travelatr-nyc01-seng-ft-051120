@@ -1,0 +1,20 @@
+<h1><%= @destination.name %></h1>
+
+<h3><%= @destination.country %></h3>
+
+<% if @destination.posts.any? %>
+    <h3>Five Most Recent Posts:</h3>
+        <% @destination.last_five.each do |post| %>
+            <%= post.title %><br>
+        <% end %>
+<% end %>
+
+<% if @destination.posts.any? %>
+<h3>Featured Post: <%= link_to @destination.featured_post.title, post_path(@destination.featured_post) %></h3>
+<% end %>
+
+
+<% if @destination.bloggers.any? %>
+    <h3>Average Age: <%= @destination.average_age %></h3>
+<% end %>  
+
