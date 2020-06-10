@@ -13,7 +13,6 @@ class PostsController < ApplicationController
     def update
         @post = Post.find(params[:id])
         @post.update
-        @post.save
         redirect_to post_path(@post)
     end
 
@@ -25,9 +24,9 @@ class PostsController < ApplicationController
     def like
         @post = Post.find(params[:id])
         # byebug
-        @post.likes += 1
+        @post.increase_likes
         @post.save
-        redirect_to post_path(@post.id)
+        redirect_to post_path(@post)
     end
 
     
