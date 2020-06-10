@@ -1,0 +1,7 @@
+<h1><%= @blogger.name %></h1>
+<% blogger_posts = @blogger.posts %>
+<% counter = 0 %>
+<% blogger_posts.each do |blogger| %>
+    <% counter += blogger.likes.to_i %>
+    <% end %>
+<%= counter %>
