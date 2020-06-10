@@ -1,0 +1,8 @@
+<h1>Destination Show Page</h1>
+
+<h3>Most Liked Destination Post: <%= link_to @destination.most_liked.title, post_path(@destination.most_liked) %>
+<h3>Average Blogger Age: <%= @destination.average_blogger_age %>
+<h3>Last Five Posts:
+   <% @destination.last_posts.each do |post| %>
+     <li><%= link_to post.title, post_path(post) %></li>
+   <%end%>
