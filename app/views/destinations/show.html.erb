@@ -1,0 +1,16 @@
+<h1>Show Page</h1>
+<h2><%= @destination.name %></h2><br>
+<p><%= @destination.country %></p><br>
+
+
+<p>Average Age of Bloggers:<%= @destination.ave_age %></p><br>
+
+<p><%= link_to "Top Post", @destination.top_post %></p><br><br>
+
+
+<p>Five Most Recent Posts</p>
+
+<% @destination.recent_five.each do |post| %>
+<p><%= link_to (post.title).titleize, post %><br>
+<% end %>
+

@@ -1,0 +1,8 @@
+<h1>Show Page</h1>
+<h2>Name:  <%= @blogger.name %></h2><br>
+<p>Age:  <%= @blogger.age %></p><br>
+<p>Bio:  <%= @blogger.bio %></p><br>
+
+<p>Total Likes:<%= @blogger.likes %><br></p>
+
+<p><%= link_to "Post with Most Likes:", @blogger.top_post %>

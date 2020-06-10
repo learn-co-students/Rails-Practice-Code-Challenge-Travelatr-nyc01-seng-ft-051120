@@ -1,0 +1,9 @@
+<h1>Show Page</h1>
+<h2>Title: <%= @post.title %></h2><br>
+<p><%= @post.content %></p><br>
+<p>Likes: <%= @post.likes %></p><br>
+
+<%= link_to "Like Post", increase_likes_path(@post) %><br>
+<%= link_to "Edit Post", edit_post_path(@post) %><br>
+<%= link_to "Blogger: #{@post.blogger.name}", @post.blogger %><br>
+<%= link_to "Destination: #{@post.destination.name}", @post.destination %><br>
