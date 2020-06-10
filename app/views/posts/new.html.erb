@@ -1,0 +1,11 @@
+<h1>Create New Post</h1>
+<%= form_for @post do |f| %>
+<%= f.label :title %><br>
+<%= f.text_field :title %><br>
+<%= f.label :content %><br>
+<%= f.text_area :content %><br>
+<%= f.collection_select :blogger_id, Blogger.all, :id, :name %>
+<%= f.collection_select :destination_id, Destination.all, :id, :name %>
+<input type="hidden" value="0" name="post[likes]">
+<%= f.submit %><br>
+<% end %>
