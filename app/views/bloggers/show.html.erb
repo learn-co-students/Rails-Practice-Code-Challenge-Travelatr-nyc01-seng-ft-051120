@@ -1,0 +1,10 @@
+<h1>Show Page</h1>
+<h2>Name:<%=@blogger.name%></h2>
+<h2>Bio:<%=@blogger.bio%></h2>
+<h2>Age:<%=@blogger.age%></h2>
+<h2>Likes:<%=@blogger.counter%></h2>
+<h2><%=link_to "Featured Post", post_path(@blogger.featured_post.id)</h2>
+
+<%= button_to [:like,post_path(@post)] do %>
+ liked! <% @post.like %>
+<% end %>
