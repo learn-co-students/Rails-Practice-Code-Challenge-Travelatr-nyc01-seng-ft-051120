@@ -1,0 +1,8 @@
+<div>
+  <h1><%= @post.title %></h1>
+</div>
+<p><%= @post.content %></p>
+<p>Likes: <%= @post.likes %></p>
+Author: <%= link_to @post.blogger.name, blogger_path(@post.blogger_id) %><br>
+Destination: <%= link_to @post.destination.name, blogger_path(@post.blogger_id) %><br>
+<%= button_to "like", action: "like", id: @post.id, method: :put%>
