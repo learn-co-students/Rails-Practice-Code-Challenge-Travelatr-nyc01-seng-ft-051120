@@ -1,0 +1,14 @@
+<h1>Posts#new</h1>
+<%= form_for( @post , remote: true) do |f| %>
+<%=f.label :title%>
+<%=f.text_field :title%>
+<%=f.label :content%>
+<%=f.text_area :content%>
+<%=f.label :likes%>
+<%=f.number_field :likes%>
+<%=f.label :blogger_id, "Blogger"%>
+<%=f.collection_select :blogger_id,@bloggers,:id,:name %>
+<%=f.label :destination_id, "Destination"%>
+<%=f.collection_select :destination_id,@destinations,:id,:name %>
+<%=f.submit %>
+<% end %>

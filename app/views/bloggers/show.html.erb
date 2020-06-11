@@ -1,0 +1,6 @@
+<h1><%=@blogger.name%></h1><br/>
+<h4>Age <%=@blogger.age%></h4><br/>
+<h4># of likes <%=@blogger.total_likes%></h4><br/>
+<p><%=@blogger.bio%></p><br/>
+
+<p>Most like post <%= (link_to  @blogger.post_with_most_likes.title, @blogger.post_with_most_likes) if @blogger.post_with_most_likes %><br/></p>
